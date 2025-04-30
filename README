@@ -1,0 +1,27 @@
+Word.ia - word search solver
+GROUP PROJECT
+
+#Use : 
+
+Clone the repository and then write make
+
+
+To run the program: type ./Word_ia then,you can load whatever grid
+image you want with the Button "Load Image" and there is many button that are
+clear to detect like the preprocess and rotate ...
+
+In order to test the save_word do:
+./save_word [image path] [output directory]
+
+As we did not finished the neural network, so we could not recognize letter
+we must use txt files with the letters of the grid and the list of word :
+
+Do ./get_coordinates [grid txt files] [list of word txt files]
+then ./detect_pos [images/ image_path]
+then ./paint_result coordinates.txt
+
+#Information : 
+grid1.txt and list1.txt correspond to image level 1
+grid2.txt and list2.txt correspond to image level 2
+
+

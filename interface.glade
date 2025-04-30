@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Enhanced UI -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="MainWindow">
+    <property name="can-focus">False</property>
+    <property name="default-width">1200</property>
+    <property name="default-height">900</property>
+    <child>
+      <object class="GtkBox" id="MainBox">
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+        <property name="margin">20</property>
+        <child>
+          <object class="GtkBox" id="ButtonBoxTop">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">10</property>
+            <property name="hexpand">True</property>
+            <property name="halign">center</property>
+            <child>
+              <object class="GtkButton" id="Load_image">
+                <property name="label" translatable="yes">Load Image</property>
+                <property name="visible">True</property>
+                <property name="tooltip-text">Load an image to process</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="Save_image">
+                <property name="label" translatable="yes">Save Image</property>
+                <property name="visible">True</property>
+                <property name="tooltip-text">Save the current image</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="ButtonBoxBottom">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">10</property>
+            <property name="hexpand">True</property>
+            <property name="halign">center</property>
+            <child>
+              <object class="GtkButton" id="Grayscale_image">
+                <property name="label" translatable="yes">Grayscale</property>
+                <property name="visible">True</property>
+                <property name="tooltip-text">Convert image to grayscale</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="BW_image">
+                <property name="label" translatable="yes">Black and White</property>
+                <property name="visible">True</property>
+                <property name="tooltip-text">Convert image to black and white</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="Preprocess_image">
+                <property name="label" translatable="yes">Preprocess</property>
+                <property name="visible">True</property>
+                <property name="tooltip-text">Apply preprocessing to image</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="Rotate_auto_image">
+                <property name="label" translatable="yes">Auto Rotation</property>
+                <property name="visible">True</property>
+                <property name="tooltip-text">Automatically rotate the image</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="RotateBox">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">10</property>
+            <property name="halign">center</property>
+            <child>
+              <object class="GtkEntry" id="RotateAngleEntry">
+                <property name="placeholder-text">Enter Angle</property>
+                <property name="visible">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="Rotate_image">
+                <property name="label" translatable="yes">Rotate Manually</property>
+                <property name="visible">True</property>
+                <property name="tooltip-text">Rotate image by entered angle</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkAlignment">
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkImage" id="ImageDisplay">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
+
